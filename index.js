@@ -1,7 +1,7 @@
 $(function() {
     $('#js-shopping-list-form').submit(function(event) {
         event.preventDefault();
-        const listItem = $('js-shopping-list-entry').val();
+        const listItem = $('.js-shopping-list-entry').val();
         
         $('.shopping-list').append(
             `<li>
@@ -16,10 +16,12 @@ $(function() {
             </div>
             </li>`);
     });
+    
     $('.shopping-list').on('click', '.shopping-item-delete', function(event){
         $(this).closest('li').remove();
-        $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
+    });    
+    
+    $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
             $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
-        });
     });
 });
