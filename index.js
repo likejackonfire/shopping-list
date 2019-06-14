@@ -23,5 +23,5 @@
     });    
     
     $('.shopping-list').on('click', 'li .shopping-item-toggle', function(event) {
-            $(this).closest('li').find('.shopping-item').toggleClass('.shopping-item__checked');
+            $(this).closest('li').find('span.shopping-item').toggleClass('shopping-item__checked');
     });
