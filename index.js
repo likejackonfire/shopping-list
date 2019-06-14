@@ -1,7 +1,8 @@
-$(function() {
+'use strict';
+
     $('#js-shopping-list-form').submit(function(event) {
         event.preventDefault();
-        const listItem = $('#js-shopping-list-entry').val();
+        const listItem = $('#shopping-list-entry').val();
         
         $('.shopping-list').append(
             `<li>
@@ -24,4 +25,3 @@ $(function() {
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
             $(this).closest('li').find('.shopping-item').toggleClass('.shopping-item__checked');
     });
-});
